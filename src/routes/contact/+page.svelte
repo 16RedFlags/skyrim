@@ -6,7 +6,7 @@
 
 <div class="contact-container">
 	<h1>Contact</h1>
-	<p class="contact-email">Email: <a href="mailto:geradotus02@gmail.com">geradotus02@gmail.com</a></p>
+	<p class="contact-email">Email: <a href="mailto:geradotus022@gmail.com">geradotus022@gmail.com</a></p>
 	<button class="github-btn" on:click={openGitHub}>
 		<img src="/images/github-mark.svg" alt="GitHub" />
 		GitHub
