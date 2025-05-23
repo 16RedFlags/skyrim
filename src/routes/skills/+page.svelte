@@ -58,8 +58,10 @@
 <style>
 	.skills-screen {
 		padding: 2rem;
+		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
+		min-height: calc(100vh - 100px); /* Account for header height */
 	}
 
 	.skills-title {
@@ -68,21 +70,23 @@
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		height: auto;
 	}
 
 	.skills-grid {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
-		justify-content: center;
+		width: 100%;
 	}
 
 	.skill-card {
-		flex: 1 1 300px;
-		max-width: 400px;
+		height: 100%;
 		background: rgba(0, 0, 0, 0.85);
 		border: 2px solid #5B5B5B;
 		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.skill-header h2 {

@@ -62,19 +62,20 @@
 
 <style>
 	:global(main) {
-		min-width: 1600px;
-		width: 100vw;
-		max-width: none;
+		width: 100%;
 		margin: 0;
 		display: flex;
 		justify-content: center;
 		padding: 0;
+		overflow-x: hidden;
 	}
 	.quest-log {
 		padding: 2rem;
-		width: 1600px;
-		height: 900px;
+		width: 100%;
+		max-width: 1600px;
+		min-height: 900px;
 		margin: 0 auto;
+		box-sizing: border-box;
 	}
 
 	.quest-header {
@@ -108,6 +109,19 @@
 		background: var(--color-bg-0);
 		border: 1px solid var(--color-border);
 		padding: 1.5rem;
+	}
+
+	@media (max-width: 1024px) {
+		.quests {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.quest-item {
+			flex: none;
+			width: 100%;
+			max-width: 600px;
+		}
 	}
 
 	.quest-title {

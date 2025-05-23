@@ -32,6 +32,7 @@
 .contact-email a {
 	color: #E0D3B8;
 	text-decoration: none;
+	cursor: url('/images/cursors/Skyrim-normal.cur'), auto;
 }
 .github-btn {
 	display: flex;
@@ -43,7 +44,7 @@
 	padding: 0.7rem 1.5rem;
 	border-radius: 4px;
 	font-size: 1rem;
-	cursor: pointer;
+	cursor: url('/images/cursors/Skyrim-normal.cur'), auto;
 	transition: background 0.2s, color 0.2s;
 	margin: 0 auto;
 }

@@ -1,9 +1,17 @@
 @font-face {
-    font-family: 'Futura PT Condensed';
-    src: url('/fonts/futura-condensed-pt-medium-589e44ed1e3a5.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Futura PT Condensed';
+	src: url('/fonts/futura-condensed-pt-medium-589e44ed1e3a5.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Skyrim';
+	src: url('/fonts/skyrim.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 :root {
@@ -14,9 +22,9 @@
 	--color-bg-2: rgba(255, 255, 255, 0.05);
 	--color-theme-1: #ff3e00;
 	--color-theme-2: #4075a6;
-	--color-primary: #FFFFFF;
-	--color-secondary: #B4B4B4;
-	--color-accent: #DAA520;
+	--color-primary: #ffffff;
+	--color-secondary: #b4b4b4;
+	--color-accent: #daa520;
 	--color-border: rgba(255, 255, 255, 0.3);
 	--color-background: rgba(0, 0, 0, 0.8);
 	--color-text: #e0d3b8;
@@ -24,6 +32,7 @@
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);
 	color: var(--color-text);
+	cursor: url('/images/cursors/Skyrim-normal.cur'), auto;
 }
 
 html {
@@ -141,7 +150,7 @@ button:focus:not(:focus-visible) {
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	cursor: pointer;
+	cursor: url('/images/cursors/Skyrim-normal.cur'), auto;
 	transition: all 0.2s ease;
 }
 
@@ -184,7 +193,7 @@ quest-description {
 	margin-bottom: 1em;
 }
 
-.quest-objective {
+quest-objective {
 	border-left: 3px solid var(--color-border);
 	padding-left: 1em;
 	margin: 0.5em 0;

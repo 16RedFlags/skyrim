@@ -66,22 +66,39 @@ Seeking to forge powerful applications and contribute to meaningful projects.`
 
 <style>
 	:global(main) {
-		min-width: 1600px;
-		width: 100vw;
-		max-width: none;
+		width: 100%;
+		height: 100vh;
 		margin: 0;
-		display: flex;
-		justify-content: center;
 		padding: 0;
+		overflow-x: hidden;
+		position: relative;
+		scrollbar-width: none;  /* Firefox */
+		-ms-overflow-style: none;  /* IE and Edge */
+	}
+
+	:global(main::-webkit-scrollbar) {
+		display: none;  /* Chrome, Safari and Opera */
 	}
 
 	.character-screen {
-		padding: 2rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 1rem;
 		display: flex;
-		width: 1600px;
+		width: 100%;
+		min-height: 100vh;
 		justify-content: center;
-		margin-left: auto;
-		margin-right: auto;
+		align-items: flex-start;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	.character-screen::-webkit-scrollbar {
+		display: none;
 	}
 
 	.character-sheet {
@@ -90,11 +107,14 @@ Seeking to forge powerful applications and contribute to meaningful projects.`
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
-		width: 1200px;
+		width: 100%;
+		max-width: 1200px;
+		height: 100%;
 		min-height: 800px;
 		padding: 3rem;
 		display: flex;
 		flex-direction: column;
+		margin-top: 0;
 	}
 
 	.header {
@@ -196,11 +216,11 @@ Seeking to forge powerful applications and contribute to meaningful projects.`
 		margin: 0;
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1024px) {
 		.character-sheet {
-			width: 100%;
 			min-height: auto;
 			padding: 2rem;
+			background-image: none;
 		}
 	}
 </style>

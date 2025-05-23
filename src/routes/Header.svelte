@@ -54,55 +54,47 @@
 		background-position: center;
 		background-size: contain;
 		width: 100%;
-		min-height: 60px;
+		min-height: clamp(40px, 8vw, 60px);
 		display: flex;
 		align-items: center;
-	}
-
-	.header-bg::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 50%;
-		width: 1200px;
-		transform: translateX(-50%);
-		bottom: 0;
-		box-shadow: inset 0 100px 10px rgba(0, 0, 0, 0.3);
-		pointer-events: none;
-		border-radius: 30px;
+		padding: clamp(0.5rem, 2vw, 1rem) 0;
 	}
 
 	nav {
 		width: 100%;
-		max-width: 1024px;
+		max-width: min(90vw, 1024px);
 		margin: 0 auto;
 		display: flex;
 		justify-content: center;
+		padding: 0 clamp(0.5rem, 2vw, 1rem);
 	}
 
 	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+		gap: clamp(0.5rem, 2vw, 1rem);
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		width: 100%;
 	}
 
 	li {
 		position: relative;
-		padding: 0.25rem 1rem;
+		padding: clamp(0.15rem, 1vw, 0.25rem) clamp(0.5rem, 2vw, 1rem);
 		transition: all 0.3s ease;
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
+		gap: clamp(0.25rem, 1vw, 0.5rem);
+		justify-content: center;
 	}
 
 	.marker {
-		width: 16px;
-		height: 16px;
+		width: clamp(12px, 2vw, 16px);
+		height: clamp(12px, 2vw, 16px);
 		opacity: 0;
 		transition: opacity 0.3s ease;
+		flex-shrink: 0;
 	}
 
 	.marker.right {
@@ -116,10 +108,12 @@
 	a {
 		color: #E0D3B8;
 		text-decoration: none;
-		font-size: 1rem;
+		font-size: clamp(0.875rem, 2.5vw, 1rem);
 		transition: color 0.3s ease;
 		text-align: center;
-		min-width: 150px;
+		min-width: clamp(100px, 20vw, 150px);
+		white-space: nowrap;
+		cursor: url('/images/cursors/Skyrim-normal.cur'), auto;
 	}
 
 	li.active a {
@@ -129,7 +123,24 @@
 	@media (min-width: 768px) {
 		ul {
 			flex-direction: row;
-			gap: 2rem;
+			gap: clamp(1rem, 3vw, 2rem);
+			justify-content: center;
+		}
+
+		nav {
+			padding: 0;
+		}
+	}
+
+	@media (max-width: 1100px) {
+		.header-bg {
+			background-image: none;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.header-bg {
+			padding: clamp(1rem, 4vw, 2rem) 0;
 		}
 	}
 </style>
